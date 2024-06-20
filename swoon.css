@@ -1,5 +1,5 @@
 html {
-  font: max(3ch, 5vmax + 3vmin) sans-serif;
+  font: max(3ch, 3vmax + 3vmin) monospace;
 }
 
 body {
@@ -11,34 +11,22 @@ body {
   overflow-wrap: anywhere;
   margin: 0;
   min-height: 100vh;
+  text-align: end;
 }
 
 body > * {
   box-sizing: border-box;
   padding: 1ch;
-}
-
-h1 {
-  font-weight: unset;
-  justify-content: center;
-  animation: 60s ease-in-out swoon infinite;
-  margin: auto;
-}
+} 
 
 p {
   margin: auto;
+  writing-mode: vertical-rl;
 }
 
 a {
   display: inline-flex;
   padding: 1vmin;
-}
-
-b {
-  text-shadow:
-    0 -3vh 0,
-    0 -2vh 0,
-    0 -1vh 0;
 }
 
 body {
@@ -47,45 +35,43 @@ body {
   margin: auto;
 }
 
-main {
+article {
   align-items: center;
+  contain: layout;
   display: flex;
   flex-flow: row;
-  justify-content: center;
   min-height: 100vh;
+  justify-content: center;
 }
 
 :root {
-  background: #ee1;
+  background: violet;
   color: indigo;
-  background-image: radial-gradient(#ee1, gainsboro);
+  background-image: linear-gradient(violet, orchid);
+}
+
+[contenteditable] {
+  background: #ec0;
+  font-size: 1.618em;
 }
 
 :any-link {
-  background: darkviolet;
-  color: #ee1;
+  background: deepskyblue;
+  color: #213;
 }
 
 ::selection {
   background: hotpink;
-  color: indigo;
-}
-
-@keyframes swoon {
-  from {
-    text-shadow: 0 -1vh 0 mediumpurple;
-  }
-
-  to {
-    text-shadow: 0 -1vh 0 darkviolet;
-  }
-}
-
-:focus-within {
-  box-shadow: 0 0 0 50vw deepskyblue;
+  color: #313;
 }
 
 :focus {
-  box-shadow: 0 0 0 30vmax mediumpurple;
+  box-shadow: 0 0 0 3vmax blueviolet;
   outline: thick outset;
+}
+
+@media (orientation: portrait) {
+  body {
+    transform: rotate(-90deg);
+  }
 }
