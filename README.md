@@ -1,3 +1,10 @@
-## [`swoon`](index.html) [mural](https://webmural.com/swoon)
+## [pretty swoon muraL](https://webmural.com/pretty)
 
-[HTML](https://webmural.com/html) [ph<b>o</b>sph<b>o</b>rescence](swoon.css)
+[HTML](index.html) [swoon remix](swoon.css)
+
+FEAT `contenteditable`
+
+```
+/\/\/\
+/\/\/\
+```
